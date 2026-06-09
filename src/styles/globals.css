@@ -3,19 +3,20 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
-  /* Grand River Advisory — blue brand palette (mirrors tailwind.config.js). */
-  --gra-navy: #0b3d6b;
-  --gra-navy-dark: #082e52;
-  --gra-primary: #1565a6;
-  --gra-primary-dark: #0f4e80;
-  --gra-blue: #2e8bc0;
-  --gra-blue-dark: #2473a3;
-  --gra-sky: #eaf2f8;
-  --gra-cloud: #f7fafc;
-  --gra-ink: #16202b;
-  --gra-slate: #4a5c7a;
+  /* Grand River Advisory — royal-blue brand (mirrors tailwind.config.js). */
+  --gra-navy: #0a1f5c;
+  --gra-navy-dark: #061544;
+  --gra-panel: #102a78;
+  --gra-primary: #2a4fe0;
+  --gra-primary-dark: #1e3cc4;
+  --gra-blue: #5b7df5;
+  --gra-blue-dark: #3e5fe0;
+  --gra-sky: #c7d6fb;
+  --gra-cloud: #eaf0fc;
+  --gra-ink: #0a1430;
+  --gra-slate: #9aacd6;
 }
 
 html,
@@ -31,8 +32,8 @@ html {
 }
 
 body {
-  background-color: var(--gra-cloud);
-  color: var(--gra-ink);
+  background-color: var(--gra-navy-dark);
+  color: #ffffff;
 }
 
 /* Keep anchored sections clear of the sticky header. */
@@ -59,14 +60,15 @@ button:focus-visible {
   }
 }
 
-/* Article typography for rendered markdown posts. */
+/* Article typography for rendered markdown posts (dark royal theme). */
 .prose-content {
-  color: var(--gra-ink);
+  color: #cbd7f5;
+  font-size: 1.05rem;
 }
 .prose-content h1,
 .prose-content h2,
 .prose-content h3 {
-  color: var(--gra-navy);
+  color: #ffffff;
   font-weight: 700;
   line-height: 1.25;
   margin: 1.4em 0 0.5em;
@@ -79,14 +81,18 @@ button:focus-visible {
 }
 .prose-content p {
   margin: 0.9em 0;
-  line-height: 1.75;
+  line-height: 1.8;
+}
+.prose-content strong {
+  color: #ffffff;
 }
 .prose-content a {
-  color: var(--gra-primary);
+  color: var(--gra-blue);
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .prose-content a:hover {
-  color: var(--gra-primary-dark);
+  color: #8aa6ff;
 }
 .prose-content ul {
   list-style: disc;
@@ -104,6 +110,7 @@ button:focus-visible {
 .prose-content blockquote {
   border-left: 3px solid var(--gra-blue);
   padding-left: 1em;
-  color: var(--gra-slate);
-  margin: 1em 0;
+  color: var(--gra-sky);
+  font-style: italic;
+  margin: 1.2em 0;
 }

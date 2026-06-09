@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 44" width="180" height="44" role="img" aria-label="Grand River Advisory">
+  <title>Grand River Advisory</title>
+  <g fill="none" stroke="#2A4FE0" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="22" cy="22" r="17.5" stroke-width="1.8" stroke="#1E3CC4"/>
+    <!-- River bend -->
+    <path d="M10 27 q 4 -3.6 8 0 t 8 0 t 8 0" stroke-width="2"/>
+    <!-- Ascending advisory trajectory + arrowhead -->
+    <path d="M11 30 C 17 19, 26 14, 33 12" stroke-width="2"/>
+    <path d="M33 12 l -5.4 0.4 M33 12 l -0.4 5.4" stroke-width="2"/>
+  </g>
+  <g font-family="system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="52" y="21" font-size="17.5" font-weight="700" letter-spacing="0.2" fill="#0A1F5C">Grand River</text>
+    <text x="53" y="35" font-size="9" font-weight="600" letter-spacing="3.8" fill="#2A4FE0">ADVISORY</text>
+  </g>
+</svg>

@@ -1,35 +1,32 @@
 /**
  * Grand River Advisory — centralized brand-asset config.
  *
- * SINGLE SOURCE OF TRUTH for the logo. The header/footer render a text/SVG
- * wordmark placeholder today because the real brand kit is not yet synced
- * locally (OneDrive lag). To swap in the real logo later, this is a ONE-FILE
- * change:
+ * SINGLE SOURCE OF TRUTH for the logo. The header/footer render the SVG logo
+ * lockup at public/images/gra-logo*.svg via the Wordmark component. To replace
+ * the mark with an official brand-kit asset later, drop the new files at the
+ * same paths (keep the same viewBox aspect, or update width/height below) — no
+ * component changes needed.
  *
- *   1. Drop the file at  public/images/gra-logo.svg  (and an inverse/white
- *      variant at  public/images/gra-logo-white.svg  for dark backgrounds).
- *   2. Set  LOGO.useImage = true  below.
- *
- * Everything that renders the brand (Wordmark component) reads from here, so no
- * other file needs to change.
+ *   - public/images/gra-logo-white.svg  → light mark, for dark backgrounds
+ *   - public/images/gra-logo.svg        → royal mark, for light backgrounds
  */
 
 export const LOGO = {
   /**
-   * Flip to `true` once the real logo SVGs exist under public/images/. While
-   * `false`, the site renders the typographic Wordmark placeholder.
+   * When `true` the SVG logo lockup is served. Set `false` only to fall back to
+   * the typographic placeholder.
    */
-  useImage: false,
+  useImage: true,
 
-  /** Logo for light backgrounds (header on white, footer copy line). */
+  /** Logo for light backgrounds. */
   src: '/images/gra-logo.svg',
 
-  /** Logo for dark/navy backgrounds (dark footer, navy CTA band). */
+  /** Logo for dark/royal backgrounds (header, footer, CTA band). */
   srcWhite: '/images/gra-logo-white.svg',
 
-  /** Intrinsic dimensions for next/image (update to match the real asset). */
+  /** Intrinsic dimensions for next/image (matches the SVG viewBox aspect). */
   width: 180,
-  height: 40,
+  height: 44,
 
   /** Accessible name for the mark. */
   alt: 'Grand River Advisory',

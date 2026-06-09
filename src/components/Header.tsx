@@ -21,14 +21,14 @@ export default function Header() {
   const mailto = `mailto:${SITE.contact.email}`;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gra-sky bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/75">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-gra-navy-dark/80 backdrop-blur supports-[backdrop-filter]:bg-gra-navy-dark/70">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5">
         <Link
           href="/"
           aria-label={`${SITE.name} — home`}
           className="shrink-0 rounded-md"
         >
-          <Wordmark />
+          <Wordmark onDark className="h-9 w-auto" />
         </Link>
 
         {/* Desktop nav */}
@@ -40,14 +40,14 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-gra-slate transition-colors hover:text-gra-navy"
+              className="text-sm font-medium text-gra-sky transition-colors hover:text-white"
             >
               {link.label}
             </Link>
           ))}
           <a
             href={mailto}
-            className="rounded-lg bg-gra-primary px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gra-primary-dark"
+            className="rounded-lg bg-gra-primary px-4 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-white/10 transition-colors hover:bg-gra-primary-dark"
           >
             Contact
           </a>
@@ -60,7 +60,7 @@ export default function Header() {
           aria-expanded={isMenuOpen}
           aria-controls="mobile-nav"
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className="inline-flex items-center justify-center rounded-md p-2 text-gra-navy md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 text-white md:hidden"
         >
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -71,7 +71,7 @@ export default function Header() {
         <nav
           id="mobile-nav"
           aria-label="Primary mobile"
-          className="border-t border-gra-sky bg-white md:hidden"
+          className="border-t border-white/10 bg-gra-navy-dark md:hidden"
         >
           <ul className="mx-auto flex max-w-6xl flex-col px-6 py-3">
             {NAV_LINKS.map((link) => (
@@ -79,7 +79,7 @@ export default function Header() {
                 <Link
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="block rounded-md py-3 text-base font-medium text-gra-slate transition-colors hover:text-gra-navy"
+                  className="block rounded-md py-3 text-base font-medium text-gra-sky transition-colors hover:text-white"
                 >
                   {link.label}
                 </Link>

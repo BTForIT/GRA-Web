@@ -55,16 +55,16 @@ const ADVISORY_SERVICES: ReadonlyArray<AdvisoryService> = [
 
 export default function WhatWeDo() {
   return (
-    <section id="what-we-do" className="bg-white py-20 sm:py-24">
+    <section id="what-we-do" className="bg-gra-navy py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gra-blue">
             What we do
           </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-gra-navy sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Advisory services for Canadian carriers
           </h2>
-          <p className="mt-4 text-lg leading-relaxed text-gra-slate">
+          <p className="mt-4 text-lg leading-relaxed text-gra-sky/85">
             We supply the analysis and the strategic context. Decision-making
             authority always rests with the airline.
           </p>
@@ -74,15 +74,15 @@ export default function WhatWeDo() {
           {ADVISORY_SERVICES.map((service) => (
             <li
               key={service.title}
-              className="group flex h-full flex-col rounded-xl border border-gra-sky bg-gra-cloud p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-gra-blue/40 hover:shadow-card-hover"
+              className="group flex h-full flex-col rounded-xl border border-white/10 bg-white/[0.04] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gra-blue/50 hover:bg-white/[0.07] hover:shadow-card-hover"
             >
-              <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gra-sky text-gra-primary transition-colors group-hover:bg-gra-primary group-hover:text-white">
+              <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gra-primary/20 text-gra-blue ring-1 ring-inset ring-white/10 transition-colors group-hover:bg-gra-primary group-hover:text-white">
                 <service.icon className="h-6 w-6" aria-hidden="true" />
               </span>
-              <h3 className="text-lg font-semibold text-gra-navy">
+              <h3 className="text-lg font-semibold text-white">
                 {service.title}
               </h3>
-              <p className="mt-2 text-[15px] leading-relaxed text-gra-slate">
+              <p className="mt-2 text-[15px] leading-relaxed text-gra-sky/80">
                 {service.description}
               </p>
             </li>
