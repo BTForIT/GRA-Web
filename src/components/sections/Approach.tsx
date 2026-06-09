@@ -1,7 +1,7 @@
 import { CheckCircle2 } from 'lucide-react';
 
 const APPROACH_FEATURES: ReadonlyArray<string> = [
-  'Canadian regional-aviation expertise',
+  'Global expertise, Canadian regional roots',
   'Regulator-aware advisory practice',
   'Data-driven commercial intelligence',
   'Independent, non-binding guidance',
@@ -22,15 +22,15 @@ export default function Approach() {
             </h2>
 
             <p className="mt-6 text-lg leading-relaxed text-gra-sky/90">
-              Grand River Aviation Advisory is a Canadian aviation investment,
-              ownership, and advisory company focused on long-term stewardship
-              and strategic growth. We support airlines launching and growing
-              scheduled service in Canada — providing market intelligence,
-              commercial analysis, and strategic guidance that help carriers make
-              well-informed decisions, while the airline retains full and
-              independent control of its own operations. Our work pairs deep
-              Canadian regional-aviation experience with disciplined,
-              regulator-aware practice.
+              Grand River Aviation Advisory brings global aviation investment,
+              ownership, and advisory expertise to Canada and beyond, with a
+              focus on long-term stewardship and strategic growth. We support
+              airlines launching and growing scheduled service — providing
+              market intelligence, commercial analysis, and strategic guidance
+              that help carriers make well-informed decisions, while the airline
+              retains full and independent control of its own operations. Our
+              work pairs international aviation perspective with deep Canadian
+              regional experience and disciplined, regulator-aware practice.
             </p>
 
             <p className="mt-5 text-lg leading-relaxed text-gra-sky/90">

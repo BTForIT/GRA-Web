@@ -22,8 +22,9 @@ export default function Footer() {
           <div className="max-w-md">
             <Wordmark onDark className="h-16 w-auto" />
             <p className="mt-4 text-sm leading-relaxed text-gra-sky/80">
-              Canadian aviation investment, ownership, and advisory — focused on
-              long-term stewardship and strategic growth.
+              Global aviation investment, ownership, and advisory expertise —
+              applied across Canada and beyond, focused on long-term
+              stewardship and strategic growth.
             </p>
             <a
               href={`mailto:${SITE.contact.email}`}

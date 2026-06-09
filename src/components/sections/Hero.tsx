@@ -25,9 +25,10 @@ export default function Hero() {
             {SITE.tagline}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gra-sky/90 sm:text-xl">
-            {SITE.subhead} We provide market intelligence, commercial analysis,
-            and strategic guidance for airlines launching and growing scheduled
-            service in Canada.
+            {SITE.subhead} We bring global aviation insight to market
+            intelligence, commercial analysis, and strategic guidance —
+            supporting airlines launching and growing scheduled service in
+            Canada and beyond.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">

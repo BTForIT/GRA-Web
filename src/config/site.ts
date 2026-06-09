@@ -50,9 +50,9 @@ export const SITE = {
   shortName: 'GRA',
   tagline: 'Aviation investment, ownership, and advisory.',
   subhead:
-    'A Canadian aviation company focused on long-term stewardship and strategic growth.',
+    'Global aviation expertise applied across Canada and beyond — focused on long-term stewardship and strategic growth.',
   description:
-    'Grand River Aviation Advisory is a Canadian aviation investment, ownership, and advisory company focused on long-term stewardship and strategic growth.',
+    'Grand River Aviation Advisory brings global aviation investment, ownership, and advisory expertise to Canada and beyond, with a focus on long-term stewardship and strategic growth.',
   url: SITE_URL,
   domain: hostFrom(SITE_URL),
   domainConfirmed: DOMAIN_CONFIRMED,

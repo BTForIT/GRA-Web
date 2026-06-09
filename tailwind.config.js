@@ -33,7 +33,10 @@ module.exports = {
       },
       fontFamily: {
         sans: ['system-ui', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-        serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+        // Modern display face (Sora, loaded via next/font as --font-sora) for
+        // all headings — replaces the former Georgia serif. Key name kept as
+        // `serif` so any legacy `font-serif` class still resolves on-brand.
+        serif: ['var(--font-sora)', 'system-ui', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
       },
       boxShadow: {
         card: '0 1px 2px rgba(6, 18, 31, 0.40), 0 10px 30px rgba(6, 18, 31, 0.45)',

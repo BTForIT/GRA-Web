@@ -62,10 +62,11 @@ export default function WhatWeDo() {
             What we do
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Advisory services for Canadian carriers
+            Advisory services for carriers in Canada and beyond
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-gra-sky/85">
-            We supply the analysis and the strategic context. Decision-making
+            We pair global aviation expertise with deep local market knowledge,
+            supplying the analysis and the strategic context. Decision-making
             authority always rests with the airline.
           </p>
         </div>

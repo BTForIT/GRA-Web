@@ -25,9 +25,11 @@
   --gra-cloud: #e6e8eb;
   --gra-slate: #a7a9ac;
 
-  /* Serif display face for headings. Brand guide: Trajan / Cinzel, with
-     Georgia as the static-export-safe (no-webfont) fallback. */
-  --font-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
+  /* Modern display face for headings. Sora is loaded site-wide via next/font
+     in _app.tsx (self-hosted, static-export safe) and exposed as --font-sora;
+     a clean system sans stack is the fallback before the webfont resolves. */
+  --font-display: var(--font-sora), system-ui, -apple-system, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif;
 }
 
 html,
@@ -47,12 +49,12 @@ body {
   color: #ffffff;
 }
 
-/* Serif headings across the site — institutional display typography. */
+/* Modern display headings across the site — institutional, contemporary. */
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
 }
 
 /* Keep anchored sections clear of the sticky header. */
@@ -88,7 +90,7 @@ button:focus-visible {
 .prose-content h2,
 .prose-content h3 {
   color: #ffffff;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.25;
   margin: 1.4em 0 0.5em;

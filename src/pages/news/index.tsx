@@ -19,7 +19,7 @@ export default function NewsIndex({ posts }: NewsIndexProps) {
     <Layout>
       <SEO
         title={SITE.blog.label}
-        description={`${SITE.blog.label} from ${SITE.name} — perspective on Canadian regional aviation and commercial strategy.`}
+        description={`${SITE.blog.label} from ${SITE.name} — perspective on aviation markets in Canada and beyond, and commercial strategy.`}
         path={`${SITE.blog.path}/`}
       />
 
@@ -32,8 +32,8 @@ export default function NewsIndex({ posts }: NewsIndexProps) {
             Notes from the firm
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-gra-sky/85">
-            Perspective on Canadian regional aviation, commercial strategy, and
-            what we are working on.
+            Perspective on aviation markets in Canada and beyond, commercial
+            strategy, and what we are working on.
           </p>
         </div>
       </section>

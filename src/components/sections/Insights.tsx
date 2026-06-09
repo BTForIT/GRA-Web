@@ -20,8 +20,8 @@ export default function Insights({ posts }: InsightsProps) {
               Notes from the firm
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-gra-sky/85">
-              Perspective on Canadian regional aviation, commercial strategy,
-              and what we are working on.
+              Perspective on aviation markets in Canada and beyond, commercial
+              strategy, and what we are working on.
             </p>
           </div>
           <Link

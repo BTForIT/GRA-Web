@@ -19,8 +19,9 @@ export default function ContactCTA() {
           Talk to an advisor
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-gra-sky/90">
-          Considering new scheduled service in Canada, or sharpening the strategy
-          behind an existing route? We are glad to help you think it through.
+          Considering new scheduled service in Canada or beyond, or sharpening
+          the strategy behind an existing route? We are glad to help you think
+          it through.
         </p>
         <div className="mt-9">
           <a
