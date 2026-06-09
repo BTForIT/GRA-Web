@@ -22,9 +22,9 @@ export const LOGO = {
   /** Same silver mark for dark backgrounds (header, footer, CTA band). */
   srcWhite: '/images/GRALogo.png',
 
-  /** Intrinsic dimensions for next/image (trimmed asset is 740×500). */
-  width: 740,
-  height: 500,
+  /** Intrinsic dimensions for next/image (tight-cropped asset is 610×240). */
+  width: 610,
+  height: 240,
 
   /** Accessible name for the mark. */
   alt: 'Grand River Aviation Advisory',

@@ -28,7 +28,7 @@ export default function Header() {
           aria-label={`${SITE.name} — home`}
           className="shrink-0 rounded-md"
         >
-          <Wordmark onDark className="h-11 w-auto" />
+          <Wordmark onDark className="h-14 w-auto" />
         </Link>
 
         {/* Desktop nav */}
