@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Minimal article typography for rendered markdown posts. */
+.prose-content h1,
+.prose-content h2,
+.prose-content h3 {
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 1.4em 0 0.5em;
+}
+.prose-content h2 {
+  font-size: 1.5rem;
+}
+.prose-content h3 {
+  font-size: 1.25rem;
+}
+.prose-content p {
+  margin: 0.9em 0;
+  line-height: 1.75;
+}
+.prose-content a {
+  color: #4b5a68;
+  text-decoration: underline;
+}
+.prose-content ul {
+  list-style: disc;
+  padding-left: 1.4em;
+  margin: 0.9em 0;
+}
+.prose-content ol {
+  list-style: decimal;
+  padding-left: 1.4em;
+  margin: 0.9em 0;
+}
+.prose-content li {
+  margin: 0.3em 0;
+}
+.prose-content blockquote {
+  border-left: 3px solid #e7edf1;
+  padding-left: 1em;
+  color: #4b5a68;
+  margin: 1em 0;
+}

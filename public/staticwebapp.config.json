@@ -1,0 +1,53 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/_next/*",
+      "/images/*",
+      "*.css",
+      "*.js",
+      "*.txt",
+      "*.xml",
+      "*.json",
+      "*.webmanifest",
+      "*.svg",
+      "*.ico",
+      "*.png",
+      "*.jpg",
+      "*.jpeg",
+      "*.webp"
+    ]
+  },
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html",
+      "statusCode": 404
+    }
+  },
+  "globalHeaders": {
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "frame-ancestors 'self'",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  },
+  "mimeTypes": {
+    ".json": "application/json",
+    ".webmanifest": "application/manifest+json",
+    ".woff": "font/woff",
+    ".woff2": "font/woff2"
+  },
+  "routes": [
+    {
+      "route": "/_next/static/*",
+      "headers": { "cache-control": "public, max-age=86400" }
+    },
+    {
+      "route": "/images/*",
+      "headers": { "cache-control": "public, max-age=86400" }
+    },
+    {
+      "route": "/*.html",
+      "headers": { "cache-control": "no-cache, no-store, must-revalidate" }
+    }
+  ]
+}

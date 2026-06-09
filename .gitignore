@@ -1,0 +1,25 @@
+# dependencies
+node_modules
+/.pnp
+.pnp.*
+
+# next.js / build output
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
+
+# env — NEVER commit secrets or real keys
+.env
+.env.*
+!.env.example
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+yarn-error.log*
+
+# editor / agent
+.claude/
+.vscode/

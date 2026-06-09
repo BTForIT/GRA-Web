@@ -1,0 +1,9 @@
+{
+  "name": "Grand River",
+  "short_name": "Grand River",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1f2a37",
+  "icons": []
+}
