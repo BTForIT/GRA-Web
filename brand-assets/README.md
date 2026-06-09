@@ -1,20 +1,40 @@
-# Brand assets — Grand River (GRA)
+# Brand assets — Grand River Advisory (GRA)
 
-Drop the Grand River brand kit here when it's available:
+Source brand material lives here. Web-ready assets the site serves at runtime
+belong under `public/`.
 
-- `logo.svg` / `logo-white.svg` — primary marks
-- `favicon.ico`, `favicon-512.png`
-- brand guidelines (PDF)
-- colour + type tokens
+## Logo swap (one-file change)
 
-Then wire the real values into:
-- `tailwind.config.js` → `theme.extend.colors.brand`
-- `src/config/site.ts` → name / tagline / social / contact
-- `public/site.webmanifest` → `theme_color`, icons
+The site currently renders a typographic **wordmark placeholder** because the
+real logo is not yet synced locally. To swap in the real mark:
 
-Until the kit lands, the site uses a **neutral placeholder palette** defined in
-`tailwind.config.js` — deliberately **not** ForIT brand colours (a client-facing
-site must never ship ForIT branding).
+1. Drop the web-ready SVGs into `public/images/`:
+   - `gra-logo.svg` — primary mark (for light backgrounds)
+   - `gra-logo-white.svg` — inverse mark (for dark/navy backgrounds)
+2. In `src/config/assets.ts`, set `LOGO.useImage = true` (and update
+   `width`/`height` to match the asset).
 
-This directory holds *source* brand material. Web-ready assets the site serves
-at runtime belong under `public/`.
+That is the only change required — `src/components/Wordmark.tsx` (used by the
+header and footer) reads everything from `src/config/assets.ts`.
+
+## Colour palette
+
+The blue brand palette is defined once in `tailwind.config.js`
+(`theme.extend.colors.gra`) and mirrored as CSS variables in
+`src/styles/globals.css`:
+
+| Token         | Hex       | Use                     |
+| ------------- | --------- | ----------------------- |
+| `gra-navy`    | `#0B3D6B` | primary / dark          |
+| `gra-primary` | `#1565A6` | primary action          |
+| `gra-blue`    | `#2E8BC0` | accent                  |
+| `gra-sky`     | `#EAF2F8` | light tint              |
+| `gra-cloud`   | `#F7FAFC` | page background         |
+| `gra-ink`     | `#16202B` | body text               |
+| `gra-slate`   | `#4A5C7A` | muted text              |
+
+## Other wiring points
+
+- `src/config/site.ts` — name / tagline / contact / blog config (source of truth)
+- `public/site.webmanifest` — `theme_color`, icons
+- `public/favicon.ico`, `public/favicon-512.png` — add when the kit lands

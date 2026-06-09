@@ -1,9 +1,9 @@
 {
-  "name": "Grand River",
-  "short_name": "Grand River",
+  "name": "Grand River Advisory",
+  "short_name": "GRA",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#1f2a37",
+  "background_color": "#f7fafc",
+  "theme_color": "#0b3d6b",
   "icons": []
 }

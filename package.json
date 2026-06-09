@@ -2,7 +2,7 @@
   "name": "gra-web",
   "version": "0.1.0",
   "private": true,
-  "description": "Grand River (GRA) — launch site: coming-soon landing + markdown blog. Static export for Azure Static Web Apps.",
+  "description": "Grand River Advisory (GRA) — Canadian aviation advisory firm website: single-page homepage + markdown Insights blog. Static export for Azure Static Web Apps.",
   "scripts": {
     "dev": "next dev -p 3007",
     "build": "next build",

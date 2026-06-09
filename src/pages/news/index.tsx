@@ -1,42 +1,79 @@
 import Link from 'next/link';
 import type { GetStaticProps } from 'next';
+import { ArrowUpRight } from 'lucide-react';
 import Layout from '@/components/Layout';
 import SEO from '@/components/SEO';
 import { SITE } from '@/config/site';
 import { getAllPosts, type PostMeta } from '@/lib/posts';
 
-interface Props {
+interface NewsIndexProps {
   posts: PostMeta[];
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<NewsIndexProps> = async () => {
   return { props: { posts: getAllPosts() } };
 };
 
-export default function NewsIndex({ posts }: Props) {
+export default function NewsIndex({ posts }: NewsIndexProps) {
   return (
     <Layout>
-      <SEO title={SITE.blog.label} path={`${SITE.blog.path}/`} />
-      <div className="mx-auto max-w-3xl px-6 py-16">
-        <h1 className="text-3xl font-bold mb-8">{SITE.blog.label}</h1>
+      <SEO
+        title={SITE.blog.label}
+        description={`${SITE.blog.label} from ${SITE.name} — perspective on Canadian regional aviation and commercial strategy.`}
+        path={`${SITE.blog.path}/`}
+      />
 
+      <section className="border-b border-gra-sky bg-white">
+        <div className="mx-auto max-w-4xl px-6 py-16 sm:py-20">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gra-blue">
+            {SITE.blog.label}
+          </p>
+          <h1 className="mt-3 text-4xl font-bold tracking-tight text-gra-navy">
+            Notes from the firm
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-gra-slate">
+            Perspective on Canadian regional aviation, commercial strategy, and
+            what we are working on.
+          </p>
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-4xl px-6 py-14">
         {posts.length === 0 ? (
-          <p className="text-brand-light">No posts yet — check back soon.</p>
+          <p className="text-gra-slate">
+            New {SITE.blog.label.toLowerCase()} are on the way — check back soon.
+          </p>
         ) : (
-          <ul className="space-y-8">
+          <ul className="space-y-6">
             {posts.map((post) => (
-              <li key={post.slug} className="border-b border-brand-muted pb-6">
-                <Link href={`${SITE.blog.path}/${post.slug}/`} className="group">
-                  <h2 className="text-xl font-semibold group-hover:underline">
+              <li key={post.slug}>
+                <Link
+                  href={`${SITE.blog.path}/${post.slug}/`}
+                  className="group block rounded-xl border border-gra-sky bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:border-gra-blue/40 hover:shadow-card-hover"
+                >
+                  <div className="flex flex-wrap items-center gap-3">
+                    {post.category && (
+                      <span className="inline-flex items-center rounded-full bg-gra-sky px-3 py-1 text-xs font-semibold uppercase tracking-wide text-gra-primary">
+                        {post.category}
+                      </span>
+                    )}
+                    {post.date && (
+                      <span className="text-sm text-gra-slate">{post.date}</span>
+                    )}
+                  </div>
+                  <h2 className="mt-3 text-xl font-semibold text-gra-navy group-hover:text-gra-primary">
                     {post.title}
                   </h2>
+                  {post.excerpt && (
+                    <p className="mt-2 leading-relaxed text-gra-slate">
+                      {post.excerpt}
+                    </p>
+                  )}
+                  <span className="mt-4 inline-flex items-center text-sm font-semibold text-gra-primary">
+                    Read more
+                    <ArrowUpRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </span>
                 </Link>
-                {post.date && (
-                  <p className="text-sm text-brand-light mt-1">{post.date}</p>
-                )}
-                {post.excerpt && (
-                  <p className="text-brand-light mt-2">{post.excerpt}</p>
-                )}
               </li>
             ))}
           </ul>

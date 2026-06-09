@@ -4,6 +4,18 @@
 
 :root {
   color-scheme: light;
+
+  /* Grand River Advisory — blue brand palette (mirrors tailwind.config.js). */
+  --gra-navy: #0b3d6b;
+  --gra-navy-dark: #082e52;
+  --gra-primary: #1565a6;
+  --gra-primary-dark: #0f4e80;
+  --gra-blue: #2e8bc0;
+  --gra-blue-dark: #2473a3;
+  --gra-sky: #eaf2f8;
+  --gra-cloud: #f7fafc;
+  --gra-ink: #16202b;
+  --gra-slate: #4a5c7a;
 }
 
 html,
@@ -12,10 +24,49 @@ body {
   margin: 0;
 }
 
-/* Minimal article typography for rendered markdown posts. */
+html {
+  /* Smooth in-page anchor navigation (header is sticky; offset via section
+     scroll-margin below). */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--gra-cloud);
+  color: var(--gra-ink);
+}
+
+/* Keep anchored sections clear of the sticky header. */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Visible, on-brand focus ring for keyboard users. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gra-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect reduced-motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* Article typography for rendered markdown posts. */
+.prose-content {
+  color: var(--gra-ink);
+}
 .prose-content h1,
 .prose-content h2,
 .prose-content h3 {
+  color: var(--gra-navy);
   font-weight: 700;
   line-height: 1.25;
   margin: 1.4em 0 0.5em;
@@ -31,8 +82,11 @@ body {
   line-height: 1.75;
 }
 .prose-content a {
-  color: #4b5a68;
+  color: var(--gra-primary);
   text-decoration: underline;
+}
+.prose-content a:hover {
+  color: var(--gra-primary-dark);
 }
 .prose-content ul {
   list-style: disc;
@@ -48,8 +102,8 @@ body {
   margin: 0.3em 0;
 }
 .prose-content blockquote {
-  border-left: 3px solid #e7edf1;
+  border-left: 3px solid var(--gra-blue);
   padding-left: 1em;
-  color: #4b5a68;
+  color: var(--gra-slate);
   margin: 1em 0;
 }

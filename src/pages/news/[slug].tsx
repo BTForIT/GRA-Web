@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import type { GetStaticPaths, GetStaticProps } from 'next';
+import { ArrowLeft } from 'lucide-react';
 import Layout from '@/components/Layout';
 import SEO from '@/components/SEO';
 import { SITE } from '@/config/site';
 import { getAllPostSlugs, getPostData, type PostData } from '@/lib/posts';
 
-interface Props {
+interface NewsPostProps {
   post: PostData;
 }
 
@@ -16,13 +17,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+export const getStaticProps: GetStaticProps<NewsPostProps> = async ({ params }) => {
   const slug = params?.slug as string;
   const post = await getPostData(slug);
   return { props: { post } };
 };
 
-export default function NewsPost({ post }: Props) {
+export default function NewsPost({ post }: NewsPostProps) {
   return (
     <Layout>
       <SEO
@@ -34,19 +35,22 @@ export default function NewsPost({ post }: Props) {
       <article className="mx-auto max-w-3xl px-6 py-16">
         <Link
           href={`${SITE.blog.path}/`}
-          className="text-sm text-brand-accent hover:underline"
+          className="inline-flex items-center text-sm font-semibold text-gra-primary transition-colors hover:text-gra-primary-dark"
         >
-          ← {SITE.blog.label}
+          <ArrowLeft className="mr-1.5 h-4 w-4" />
+          {SITE.blog.label}
         </Link>
-        <h1 className="text-3xl font-bold mt-4 mb-2">{post.title}</h1>
+        <h1 className="mt-5 text-3xl font-bold tracking-tight text-gra-navy sm:text-4xl">
+          {post.title}
+        </h1>
         {post.date && (
-          <p className="text-sm text-brand-light mb-8">
+          <p className="mt-3 text-sm text-gra-slate">
             {post.date}
             {post.author ? ` · ${post.author}` : ''}
           </p>
         )}
         <div
-          className="prose-content"
+          className="prose-content mt-8"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
       </article>

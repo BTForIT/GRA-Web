@@ -1,5 +1,6 @@
-# Generated/overwritten at build time by scripts/generate-seo.mjs using
-# NEXT_PUBLIC_SITE_URL. This committed default is conservative: until a real
-# domain is configured, do not advertise the placeholder origin to crawlers.
+# Overwritten at build time by scripts/generate-seo.mjs using
+# NEXT_PUBLIC_SITE_URL. This committed default matches the confirmed production
+# domain (graadvisory.com) so the source tree reflects the live policy.
 User-agent: *
-Disallow: /
+Allow: /
+Sitemap: https://graadvisory.com/sitemap.xml

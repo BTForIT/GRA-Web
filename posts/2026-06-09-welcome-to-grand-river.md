@@ -1,24 +1,38 @@
 ---
-title: "Grand River is on the way"
+title: "Welcome to Grand River Advisory"
 date: "2026-06-09"
-author: "Grand River"
-excerpt: "We're putting the finishing touches on something new. Here's a first hello while we build."
-category: "Announcement"
-tags: ["announcement", "launch"]
+author: "Grand River Advisory"
+excerpt: "An introduction to our firm — what we do, how we work, and the principle that guides every engagement: the analysis is ours, the decisions are the airline's."
+category: "Firm News"
+tags: ["advisory", "canadian-aviation", "introduction"]
 published: true
 ---
 
-# Grand River is on the way
+# Welcome to Grand River Advisory
 
-Welcome. This is the first note from Grand River as we get ready to launch.
+Grand River Advisory is a Canadian aviation advisory firm. We support airlines
+that are launching and growing scheduled service in Canada by providing market
+intelligence, commercial analysis, and strategic guidance — the kind of
+groundwork that helps a carrier decide with confidence.
 
-We're building a new home on the web. While the full site comes together, this
-space will carry our announcements and updates.
+We work across underserved Canadian markets, where the right route, the right
+schedule, and the right commercial strategy can reconnect communities and open
+new economic opportunity. Our experience is rooted in Canadian regional
+aviation, and our practice is disciplined and regulator-aware.
 
-## What to expect
+## How we work
 
-- Updates as we approach launch
-- News and announcements
-- A look at what we're working on
+Our role is advisory by design. We supply the analysis; the airline makes the
+decisions. Every engagement preserves the carrier's full and independent
+control of its own operations.
 
-Thanks for stopping by early. More soon.
+In practice, that means:
+
+- **Market and route analysis** to inform network and schedule planning
+- **Commercial intelligence** — fare benchmarking, revenue context, and channel reporting
+- **Strategic guidance** that frames options without making the call
+
+## What to expect here
+
+This space will carry perspective on Canadian regional aviation, commercial
+strategy, and notes on what we are working on. Thanks for reading — more soon.
