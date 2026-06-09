@@ -28,7 +28,7 @@ export default function Header() {
           aria-label={`${SITE.name} — home`}
           className="shrink-0 rounded-md"
         >
-          <Wordmark onDark className="h-9 w-auto" />
+          <Wordmark onDark className="h-11 w-auto" />
         </Link>
 
         {/* Desktop nav */}
@@ -47,7 +47,7 @@ export default function Header() {
           ))}
           <a
             href={mailto}
-            className="rounded-lg bg-gra-primary px-4 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-white/10 transition-colors hover:bg-gra-primary-dark"
+            className="rounded-lg bg-gra-pearl px-4 py-2 text-sm font-semibold text-gra-navy shadow-sm ring-1 ring-white/10 transition-colors hover:bg-white"
           >
             Contact
           </a>
@@ -89,7 +89,7 @@ export default function Header() {
               <a
                 href={mailto}
                 onClick={() => setIsMenuOpen(false)}
-                className="block rounded-lg bg-gra-primary px-4 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-gra-primary-dark"
+                className="block rounded-lg bg-gra-pearl px-4 py-3 text-center text-base font-semibold text-gra-navy transition-colors hover:bg-white"
               >
                 Contact
               </a>

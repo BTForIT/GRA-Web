@@ -46,12 +46,13 @@ function hostFrom(origin: string): string {
 }
 
 export const SITE = {
-  name: 'Grand River Advisory',
+  name: 'Grand River Aviation Advisory',
   shortName: 'GRA',
-  tagline: 'Clear guidance for Canadian aviation.',
-  subhead: 'Intelligence that helps airlines decide with confidence.',
+  tagline: 'Aviation investment, ownership, and advisory.',
+  subhead:
+    'A Canadian aviation company focused on long-term stewardship and strategic growth.',
   description:
-    'Grand River Advisory is a Canadian aviation advisory firm providing market intelligence, commercial analysis, and strategic guidance to airlines launching and growing scheduled service in Canada.',
+    'Grand River Aviation Advisory is a Canadian aviation investment, ownership, and advisory company focused on long-term stewardship and strategic growth.',
   url: SITE_URL,
   domain: hostFrom(SITE_URL),
   domainConfirmed: DOMAIN_CONFIRMED,

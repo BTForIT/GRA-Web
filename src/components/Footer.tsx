@@ -20,10 +20,10 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-14">
         <div className="grid gap-10 md:grid-cols-2">
           <div className="max-w-md">
-            <Wordmark onDark className="h-10 w-auto" />
+            <Wordmark onDark className="h-12 w-auto" />
             <p className="mt-4 text-sm leading-relaxed text-gra-sky/80">
-              Canadian aviation advisory — market intelligence, commercial
-              analysis, and strategic guidance for airlines.
+              Canadian aviation investment, ownership, and advisory — focused on
+              long-term stewardship and strategic growth.
             </p>
             <a
               href={`mailto:${SITE.contact.email}`}

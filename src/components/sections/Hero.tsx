@@ -6,14 +6,14 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-gra-navy-dark via-gra-navy to-gra-navy-dark">
-      {/* Soft royal glows for depth. */}
+      {/* Soft silver glows — light catching off the navy, kept subtle. */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
       >
-        <div className="absolute -left-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-gra-primary opacity-40 blur-3xl" />
-        <div className="absolute -bottom-40 right-[-6rem] h-[30rem] w-[30rem] rounded-full bg-gra-blue opacity-25 blur-3xl" />
-        <div className="absolute left-1/2 top-1/3 h-72 w-72 -translate-x-1/2 rounded-full bg-gra-blue-dark opacity-20 blur-3xl" />
+        <div className="absolute -left-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-gra-silver opacity-[0.12] blur-3xl" />
+        <div className="absolute -bottom-40 right-[-6rem] h-[30rem] w-[30rem] rounded-full bg-gra-pearl opacity-[0.08] blur-3xl" />
+        <div className="absolute left-1/2 top-1/3 h-72 w-72 -translate-x-1/2 rounded-full bg-gra-silver-dark opacity-[0.10] blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
@@ -33,7 +33,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
               href={mailto}
-              className="group inline-flex items-center justify-center rounded-xl bg-gra-primary px-7 py-3.5 text-base font-semibold text-white shadow-glow ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-gra-primary-dark"
+              className="group inline-flex items-center justify-center rounded-xl bg-gra-pearl px-7 py-3.5 text-base font-semibold text-gra-navy shadow-glow ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-white"
             >
               Get in touch
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

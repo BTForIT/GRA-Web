@@ -5,18 +5,29 @@
 :root {
   color-scheme: dark;
 
-  /* Grand River Advisory — royal-blue brand (mirrors tailwind.config.js). */
-  --gra-navy: #0a1f5c;
-  --gra-navy-dark: #061544;
-  --gra-panel: #102a78;
-  --gra-primary: #2a4fe0;
-  --gra-primary-dark: #1e3cc4;
-  --gra-blue: #5b7df5;
-  --gra-blue-dark: #3e5fe0;
-  --gra-sky: #c7d6fb;
-  --gra-cloud: #eaf0fc;
-  --gra-ink: #0a1430;
-  --gra-slate: #9aacd6;
+  /* Grand River Aviation Advisory — Institutional Monogram palette
+     (mirrors tailwind.config.js). Midnight Navy / Silver / Pearl. */
+  --gra-navy: #0a1a2f;
+  --gra-navy-dark: #06121f;
+  --gra-panel: #11243a;
+  --gra-silver: #a7a9ac;
+  --gra-silver-dark: #7c7f84;
+  --gra-pearl: #e6e8eb;
+  --gra-ink: #0a1a2f;
+
+  /* Legacy aliases → institutional palette (kept so existing CSS/classes
+     resolve on-brand without churn). */
+  --gra-primary: #a7a9ac;
+  --gra-primary-dark: #7c7f84;
+  --gra-blue: #a7a9ac;
+  --gra-blue-dark: #7c7f84;
+  --gra-sky: #e6e8eb;
+  --gra-cloud: #e6e8eb;
+  --gra-slate: #a7a9ac;
+
+  /* Serif display face for headings. Brand guide: Trajan / Cinzel, with
+     Georgia as the static-export-safe (no-webfont) fallback. */
+  --font-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 
 html,
@@ -36,6 +47,14 @@ body {
   color: #ffffff;
 }
 
+/* Serif headings across the site — institutional display typography. */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+}
+
 /* Keep anchored sections clear of the sticky header. */
 [id] {
   scroll-margin-top: 5rem;
@@ -44,7 +63,7 @@ body {
 /* Visible, on-brand focus ring for keyboard users. */
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--gra-blue);
+  outline: 2px solid var(--gra-silver);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -60,15 +79,16 @@ button:focus-visible {
   }
 }
 
-/* Article typography for rendered markdown posts (dark royal theme). */
+/* Article typography for rendered markdown posts (Midnight Navy theme). */
 .prose-content {
-  color: #cbd7f5;
+  color: #d7dade;
   font-size: 1.05rem;
 }
 .prose-content h1,
 .prose-content h2,
 .prose-content h3 {
   color: #ffffff;
+  font-family: var(--font-serif);
   font-weight: 700;
   line-height: 1.25;
   margin: 1.4em 0 0.5em;
@@ -87,12 +107,12 @@ button:focus-visible {
   color: #ffffff;
 }
 .prose-content a {
-  color: var(--gra-blue);
+  color: var(--gra-pearl);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 .prose-content a:hover {
-  color: #8aa6ff;
+  color: #ffffff;
 }
 .prose-content ul {
   list-style: disc;
@@ -108,9 +128,9 @@ button:focus-visible {
   margin: 0.3em 0;
 }
 .prose-content blockquote {
-  border-left: 3px solid var(--gra-blue);
+  border-left: 3px solid var(--gra-silver);
   padding-left: 1em;
-  color: var(--gra-sky);
+  color: var(--gra-pearl);
   font-style: italic;
   margin: 1.2em 0;
 }

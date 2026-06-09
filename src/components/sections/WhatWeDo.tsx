@@ -76,7 +76,7 @@ export default function WhatWeDo() {
               key={service.title}
               className="group flex h-full flex-col rounded-xl border border-white/10 bg-white/[0.04] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gra-blue/50 hover:bg-white/[0.07] hover:shadow-card-hover"
             >
-              <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gra-primary/20 text-gra-blue ring-1 ring-inset ring-white/10 transition-colors group-hover:bg-gra-primary group-hover:text-white">
+              <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-white/[0.06] text-gra-silver ring-1 ring-inset ring-white/10 transition-colors group-hover:bg-gra-silver group-hover:text-gra-navy">
                 <service.icon className="h-6 w-6" aria-hidden="true" />
               </span>
               <h3 className="text-lg font-semibold text-white">

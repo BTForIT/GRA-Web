@@ -22,13 +22,15 @@ export default function Approach() {
             </h2>
 
             <p className="mt-6 text-lg leading-relaxed text-gra-sky/90">
-              Grand River Advisory is a Canadian aviation advisory firm that
-              supports airlines launching and growing scheduled service in
-              Canada. We provide market intelligence, commercial analysis, and
-              strategic guidance that help carriers make well-informed decisions
-              — while the airline retains full and independent control of its own
-              operations. Our work pairs deep Canadian regional-aviation
-              experience with disciplined, regulator-aware advisory practice.
+              Grand River Aviation Advisory is a Canadian aviation investment,
+              ownership, and advisory company focused on long-term stewardship
+              and strategic growth. We support airlines launching and growing
+              scheduled service in Canada — providing market intelligence,
+              commercial analysis, and strategic guidance that help carriers make
+              well-informed decisions, while the airline retains full and
+              independent control of its own operations. Our work pairs deep
+              Canadian regional-aviation experience with disciplined,
+              regulator-aware practice.
             </p>
 
             <p className="mt-5 text-lg leading-relaxed text-gra-sky/90">
