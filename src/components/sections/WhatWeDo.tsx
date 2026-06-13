@@ -55,35 +55,35 @@ const ADVISORY_SERVICES: ReadonlyArray<AdvisoryService> = [
 
 export default function WhatWeDo() {
   return (
-    <section id="what-we-do" className="bg-gra-navy py-20 sm:py-24">
+    <section id="what-we-do" className="bg-white py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gra-blue">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gra-silver-dark">
             What we do
           </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-gra-ink sm:text-4xl">
             Advisory services for carriers in Canada and beyond
           </h2>
-          <p className="mt-4 text-lg leading-relaxed text-gra-sky/85">
+          <p className="mt-4 text-lg leading-relaxed text-gra-ink/70">
             We pair global aviation expertise with deep local market knowledge,
             supplying the analysis and the strategic context. Decision-making
             authority always rests with the airline.
           </p>
         </div>
 
-        <ul className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-14 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
           {ADVISORY_SERVICES.map((service) => (
             <li
               key={service.title}
-              className="group flex h-full flex-col rounded-xl border border-white/10 bg-white/[0.04] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gra-blue/50 hover:bg-white/[0.07] hover:shadow-card-hover"
+              className="group flex h-full flex-col rounded-2xl border border-gra-silver/30 bg-gra-pearl/40 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-gra-silver/60 hover:bg-white hover:shadow-md"
             >
-              <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-white/[0.06] text-gra-silver ring-1 ring-inset ring-white/10 transition-colors group-hover:bg-gra-silver group-hover:text-gra-navy">
+              <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gra-navy/5 text-gra-silver-dark ring-1 ring-inset ring-gra-navy/10 transition-colors group-hover:bg-gra-navy group-hover:text-white">
                 <service.icon className="h-6 w-6" aria-hidden="true" />
               </span>
-              <h3 className="text-lg font-semibold text-white">
+              <h3 className="text-lg font-semibold text-gra-ink">
                 {service.title}
               </h3>
-              <p className="mt-2 text-[15px] leading-relaxed text-gra-sky/80">
+              <p className="mt-2 text-[15px] leading-relaxed text-gra-ink/65">
                 {service.description}
               </p>
             </li>

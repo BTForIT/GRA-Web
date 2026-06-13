@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
   /* Grand River Aviation Advisory — Institutional Monogram palette
      (mirrors tailwind.config.js). Midnight Navy / Silver / Pearl. */
@@ -45,8 +45,10 @@ html {
 }
 
 body {
-  background-color: var(--gra-navy-dark);
-  color: #ffffff;
+  /* Lightened brand surface — Pearl base with Midnight Navy ink. The dark
+     navy is retained as a deliberate anchor on the Contact band and Footer. */
+  background-color: var(--gra-pearl);
+  color: var(--gra-ink);
 }
 
 /* Modern display headings across the site — institutional, contemporary. */
@@ -81,17 +83,18 @@ button:focus-visible {
   }
 }
 
-/* Article typography for rendered markdown posts (Midnight Navy theme). */
+/* Article typography for rendered markdown posts (Pearl light theme —
+   navy ink on light, silver accents). */
 .prose-content {
-  color: #d7dade;
+  color: rgba(10, 26, 47, 0.82);
   font-size: 1.05rem;
 }
 .prose-content h1,
 .prose-content h2,
 .prose-content h3 {
-  color: #ffffff;
+  color: var(--gra-ink);
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.25;
   margin: 1.4em 0 0.5em;
 }
@@ -106,15 +109,15 @@ button:focus-visible {
   line-height: 1.8;
 }
 .prose-content strong {
-  color: #ffffff;
+  color: var(--gra-ink);
 }
 .prose-content a {
-  color: var(--gra-pearl);
+  color: var(--gra-navy);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 .prose-content a:hover {
-  color: #ffffff;
+  color: var(--gra-silver-dark);
 }
 .prose-content ul {
   list-style: disc;
@@ -132,7 +135,7 @@ button:focus-visible {
 .prose-content blockquote {
   border-left: 3px solid var(--gra-silver);
   padding-left: 1em;
-  color: var(--gra-pearl);
+  color: var(--gra-silver-dark);
   font-style: italic;
   margin: 1.2em 0;
 }

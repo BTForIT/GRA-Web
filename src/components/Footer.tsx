@@ -3,6 +3,7 @@ import { SITE } from '@/config/site';
 import Wordmark from '@/components/Wordmark';
 
 const FOOTER_LINKS: ReadonlyArray<{ label: string; href: string }> = [
+  { label: 'About', href: '/about' },
   { label: 'What We Do', href: '/#what-we-do' },
   { label: 'Approach', href: '/#approach' },
   { label: 'Insights', href: '/#insights' },

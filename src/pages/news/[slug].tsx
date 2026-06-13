@@ -35,16 +35,16 @@ export default function NewsPost({ post }: NewsPostProps) {
       <article className="mx-auto max-w-3xl px-6 py-16">
         <Link
           href={`${SITE.blog.path}/`}
-          className="inline-flex items-center text-sm font-semibold text-gra-blue transition-colors hover:text-white"
+          className="inline-flex items-center text-sm font-semibold text-gra-navy transition-colors hover:text-gra-silver-dark"
         >
           <ArrowLeft className="mr-1.5 h-4 w-4" />
           {SITE.blog.label}
         </Link>
-        <h1 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        <h1 className="mt-5 text-3xl font-semibold tracking-tight text-gra-ink sm:text-4xl">
           {post.title}
         </h1>
         {post.date && (
-          <p className="mt-3 text-sm text-gra-slate">
+          <p className="mt-3 text-sm text-gra-silver-dark">
             {post.date}
             {post.author ? ` · ${post.author}` : ''}
           </p>
